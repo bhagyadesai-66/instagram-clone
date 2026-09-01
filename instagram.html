@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InstaClone</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #fafafa;
+        }
+
+        /* Header */
+        header {
+            background: white;
+            padding: 15px 20px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .icons {
+            font-size: 22px;
+        }
+
+        /* Stories */
+        .stories {
+            display: flex;
+            gap: 15px;
+            padding: 15px;
+            overflow-x: auto;
+            background: white;
+        }
+
+        .story {
+            text-align: center;
+            font-size: 12px;
+        }
+
+        .story img {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            border: 3px solid #e1306c;
+            padding: 2px;
+        }
+
+        /* Post */
+        .post {
+            background: white;
+            margin: 15px auto;
+            max-width: 500px;
+            border: 1px solid #ddd;
+        }
+
+        .post-header {
+            padding: 12px;
+            font-weight: bold;
+        }
+
+        .post img {
+            width: 100%;
+            display: block;
+        }
+
+        .actions {
+            padding: 10px;
+            font-size: 25px;
+            cursor: pointer;
+        }
+
+        .caption {
+            padding: 0 12px 15px;
+        }
+
+        /* Bottom Navigation */
+        nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: white;
+            border-top: 1px solid #ddd;
+            display: flex;
+            justify-content: space-around;
+            padding: 12px;
+            font-size: 22px;
+        }
+
+        .liked {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">InstaClone</div>
+    <div class="icons">♡ ✉</div>
+</header>
+
+<!-- Stories -->
+<div class="stories">
+
+    <div class="story">
+        <img src="https://picsum.photos/100?1">
+        <p>Your Story</p>
+    </div>
+
+    <div class="story">
+        <img src="https://picsum.photos/100?2">
+        <p>Rahul</p>
+    </div>
+
+    <div class="story">
+        <img src="https://picsum.photos/100?3">
+        <p>Anjali</p>
+    </div>
+
+    <div class="story">
+        <img src="https://picsum.photos/100?4">
+        <p>Priya</p>
+    </div>
+
+</div>
+
+<!-- Post -->
+<div class="post">
+
+    <div class="post-header">
+        bhagya_01
+    </div>
+
+    <img src="https://picsum.photos/600/500">
+
+    <div class="actions">
+        <span onclick="likePost(this)">♡</span>
+        💬
+        ✈
+    </div>
+
+    <div class="caption">
+        <b>bhagya_01</b> My first post ✨
+    </div>
+
+</div>
+
+<!-- Bottom Navigation -->
+<nav>
+    🏠
+    🔍
+    ➕
+    ❤️
+    👤
+</nav>
+
+<script>
+function likePost(element) {
+    element.innerHTML = "♥";
+    element.classList.add("liked");
+}
+</script>
+
+</body>
+</html>
